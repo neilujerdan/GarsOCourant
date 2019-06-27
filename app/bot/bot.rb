@@ -7,19 +7,18 @@ Facebook::Messenger::Subscriptions.subscribe(
 )
 
 Bot.on :message do |message|
-        message.reply(text: "Bienvenue sur SunCherBot, shouaitez vous des conseil pour mieux consommé votre énérgies solaire ?")
-    if message.text.include? "oui" ?: "Oui" ?: "OUI"
+    if message.text.include? "oui" OR "Oui" OR "OUI"
         message.reply(text: "Possédez vous des panneaux solaire ?")
-    elsif message.text.include? "NON" ?: "Non" ?: "non"
+    elsif message.text.include? "NON" OR "Non" OR "non"
         message.reply(text: "D'accord n'hésitez a revenir me voir plus tard.")
     else 
         message.reply(text: "je n'ai pas compris ta réponse")
     end
 
-    if message.text.include? "oui" ?: "Oui" ?: "OUI"
+    if message.text.include? "oui" OR "Oui" OR "OUI"
         message.reply(text: "Possédez vous un ou des appareil suivant ? 
         Un four éléctrique, une plaque éléctrique, une machine a lavez, un lave vaiselle, un sèche linge.")
-    elsif message.text.include? "NON" ?: "Non" ?: "non"
+    elsif message.text.include? "NON" OR "Non" OR "non"
         message.reply(text: "Vous avez la possibilité de produire et partagez votre électricité à travers le réseau public 
         et faire une économie sur le cout de votre énérgie d'environ 30% grace au service SunShare. 
         Vous pouvez consultez leur site web pour plus d'information -> https://www.sunshare.fr")

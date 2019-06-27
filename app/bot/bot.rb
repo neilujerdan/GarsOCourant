@@ -9,5 +9,4 @@ Facebook::Messenger::Subscriptions.subscribe(
 Bot.on :message do |message|
     if message.text.include? 'oui' OR 'Oui' OR 'OUI'
         message.reply(text: 'Possédez vous des panneaux solaire ?')
-
 end

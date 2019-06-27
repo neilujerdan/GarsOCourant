@@ -7,5 +7,12 @@ Facebook::Messenger::Subscriptions.subscribe(
 )
 
 Bot.on :message do |message|
-  message.reply(text: 'Bienvenue sur SunCherBot, souhaitez-vous des conseils pour mieux consommer votre énergie solaire ?')
+  if message.text.include? "Bonjour"
+     message.reply(text: "Wesh maggl") 
+ elsif message.text.include? "Bonne nuit"
+      message.reply(text: "Dors bien fdp") 
+  else
+      message.reply(text: 'Reponse par defaut')
+  end
+
 end

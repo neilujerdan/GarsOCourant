@@ -8,11 +8,12 @@ Facebook::Messenger::Subscriptions.subscribe(
 
 Bot.on :message do |message|
 
-  consoEnergie = 0
-    message.typing_on
-    
-    message.reply(text: "Bienvenue sur SunCherBot, shouaitez vous des conseil pour mieux consommé votre énérgies solaire ?")
-  if message.text.include? "oui" ?: "Oui" ?: "OUI"
+  #consoEnergie = 0
+  message.typing_on
+   
+  message.reply(text: "Bienvenue sur SunCherBot, shouaitez vous des conseil pour mieux consommé votre énérgies solaire ?")
+  
+  /if message.text.include? "oui" ?: "Oui" ?: "OUI"
       message.reply(text: "Possédez vous des panneaux solaire ?")
   elsif message.text.include? "NON" ?: "Non" ?: "non"
       message.reply(text: "D'accord n'hésitez a revenir me voir plus tard.")
@@ -38,6 +39,6 @@ Bot.on :message do |message|
   utilisation = message.text
 
  # if message.text.include? "four electrique" ?: "four éléctrique" ?: "Four éléctrique" ?: "Four electrique"
-      consoEnergie = consoEnergie + 
+      consoEnergie = consoEnergie + /
 
 end

@@ -9,7 +9,8 @@ Facebook::Messenger::Subscriptions.subscribe(
 Bot.on :message do |message|
 
   consoEnergie = 0
-  if message.text.include? "Bonjour"
+    message.typing_on
+    
     message.reply(text: "Bienvenue sur SunCherBot, shouaitez vous des conseil pour mieux consommé votre énérgies solaire ?")
   if message.text.include? "oui" ?: "Oui" ?: "OUI"
       message.reply(text: "Possédez vous des panneaux solaire ?")

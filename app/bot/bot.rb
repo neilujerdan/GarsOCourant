@@ -7,6 +7,12 @@ Facebook::Messenger::Subscriptions.subscribe(
 )
 
 Bot.on :message do |message|
-    if message.text.include? 'oui'
-        message.reply(text: 'Possédez vous des panneaux solaire ?')
+  if message.text.include? "Bonjour"
+    message.reply(text: "Wesh maggl") 
+  elsif message.text.include? "Bonne nuit"
+     message.reply(text: "Dors bien fdp") 
+  else
+     message.reply(text: 'Reponse par defaut')
+  end
+
 end
